@@ -105,6 +105,8 @@ let sel = document.querySelector('select');
             $('.feature .four').text('Get all kinds of offers from one app.');
             $('.feature .five').text('Know the expected arrival time and service level.');
             $('.feature .six').text('Order you coffee or meal from any cafe or restaurant thru the app.');
+            $('.feature .seven').text('Coupon');
+            $('.feature .eight').text('Services');
 
             // ................................................
 
@@ -207,6 +209,8 @@ let sel = document.querySelector('select');
             $('.feature .four').text('احصل علي جميع أنواع العروض من تطبيق واحد.');
             $('.feature .five').text('معرفة وقت الوصول المتوقع ومستوي الخدمة.');
             $('.feature .six').text('اطلب قهوتك أو وجبتك من أي كافية أو مطعم من خلال التطبيق.');
+            $('.feature .seven').text('قسيمة خصم.');
+            $('.feature .eight').text('خدمات.');
 
             // ................................................
 
