@@ -170,7 +170,7 @@ let sel = document.querySelector('select');
             $('.custome').addClass('me-auto');
 
             $('a[href = "#home"]').text('الرئيسية');
-            $('a[href = "#features"]').text('المميزت');
+            $('a[href = "#features"]').text('المميزات');
             $('a[href = "#screenshots"]').text('اللقطات');
             $('a[href = "#about"]').text('تعرف علينا');
             $('a[href = "#get"]').text('الحصول علي تطبيقنا');
