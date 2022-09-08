@@ -105,7 +105,7 @@ let sel = document.querySelector('select');
             $('.feature .four').text('Get all kinds of offers from one app.');
             $('.feature .five').text('Know the expected arrival time and service level.');
             $('.feature .six').text('Order you coffee or meal from any cafe or restaurant thru the app.');
-            $('.feature .seven').text('Coupon');
+            $('.feature .seven').text('Get the latest discount coupons through the app.');
             $('.feature .eight').text('Services');
 
             // ................................................
@@ -182,7 +182,7 @@ let sel = document.querySelector('select');
 
             $('header').attr('dir' , 'rtl');
             $('.caption h1').text('وفر وقتك بضغطة زر واحدة')
-            $('.caption p').text('وقتك مهم جدا لدرجة ان مهمتنا هي توفير وقتك ومساعدتك في الحصول علي موعد دون انتظار.');
+            $('.caption p').text('التطبيق الاسهل والاسرع في حجز موعدك وتوفير وقتك دون انتظار..');
             $('.home .vectors .vector').css('marginTop','30px');
             $('.home .buttons .special-m').html(`<i
             class="fa-solid fa-download me-1"></i> الحصول علي التطبيق`);
@@ -202,14 +202,14 @@ let sel = document.querySelector('select');
             $('.special-second').css({'marginRight':'0px' , 'marginLeft' : 'auto'});
             $('.feature span').css({'marginRight':'0px' , 'marginLeft' : '14px'})
             $('.features .main-title h5').text('ماذا نخدم ؟');
-            $('.features .main-title h2').text('ميزاتنا');
+            $('.features .main-title h2').text('أبرز ميزات تطبيق Zari on time.');
             $('.feature .one').text('احجز دورك وموعدك من أي مكان.');
             $('.feature .two').html(`تبحث عن المتعة ؟ <br> Zari on Time تتيح لك معرفة أفضل الأماكن للإستمتاع.`);
             $('.feature .three').text('احجز أقرب الأحداث من حولك.');
             $('.feature .four').text('احصل علي جميع أنواع العروض من تطبيق واحد.');
             $('.feature .five').text('معرفة وقت الوصول المتوقع ومستوي الخدمة.');
             $('.feature .six').text('اطلب قهوتك أو وجبتك من أي كافية أو مطعم من خلال التطبيق.');
-            $('.feature .seven').text('قسيمة خصم.');
+            $('.feature .seven').text('احصل علي أحدث كوبونات الخصم من خلال التطبيق.');
             $('.feature .eight').text('خدمات.');
 
             // ................................................
@@ -222,7 +222,7 @@ let sel = document.querySelector('select');
             $('.about').attr('dir','rtl');
             $('.about h5').text('هل تعرفنا ؟');
             $('.about h2').text('حول Zari On Time');
-            $('.about p').text('Zari on Time تتيح لك إجراء الحجز لأي طبيب , صالون , بنوك أو خارجها بإستخدام تطبيقين أحدهما للعميل واخر للبنوك.');
+            $('.about p').text('في تطبيق Zari on time نهتم بتوفير الوقت من خلال خدمات الحجز المتنوعة مستشفيات، صالونات، بنوك أو غيرها…');
 
             // .................................................
 
