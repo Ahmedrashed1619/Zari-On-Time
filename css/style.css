@@ -433,6 +433,8 @@ option {
 }
 
 
+/* Responsive */
+
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     .img-feature img {
         width: 100%;
@@ -447,6 +449,10 @@ option {
 
     .special {
         margin-right: auto;
+    }
+
+    .special-second {
+        margin-left: auto;
     }
 
     .img-feature img {
@@ -470,6 +476,8 @@ option {
 .about .img-about img:hover {
     transform: scale(1.1, 1.1);
 }
+
+/* Responsive */
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     .about .img-about img {
@@ -495,6 +503,7 @@ option {
         margin-right: auto;
     }
 }
+
 
 /* get app section */
 .parag>p {
@@ -522,6 +531,8 @@ option {
 .img-apps img:hover {
     transform: scale(1.1, 1.1);
 }
+
+/* Responsive */
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     .img-apps img {
@@ -559,7 +570,6 @@ option {
         width: 40% !important;
     }
 }
-
 
 
 
@@ -664,6 +674,7 @@ option {
 .navigate div p {
     margin-top: 10px;
     margin-bottom: 0px;
+    text-align: start;
 }
 
 /* Responsive footer */
@@ -682,21 +693,13 @@ option {
 
 @media screen and (max-width: 992px) {
 
-    .logo-footer,
-    .navigate {
-        text-align: center;
-    }
-
     .icons-footer {
         justify-content: center;
     }
-}
-
-@media screen and (max-width: 768px) {
 
     .logo-footer,
     .navigate {
-        width: 75%;
+        width: 75% !important;
         margin-left: auto;
         margin-right: auto;
     }
