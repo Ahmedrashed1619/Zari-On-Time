@@ -49,10 +49,56 @@ $('.navbar-nav .nav-item a').click(function () {
     $('html , body').animate({ scrollTop: currentOffset }, 500);
 })
 
+// select the button
 
-let sel = document.querySelector('select');
-sel.addEventListener('change', function () {
-    if (this.options[sel.selectedIndex].text == 'English' || this.options[sel.selectedIndex].text == 'الإنجليزية') {
+let sel = document.querySelector('.custome .language');
+let selText = document.querySelector('.custome .language button').innerHTML;
+
+// for change dir & lang
+
+let active = true;
+
+// for media query when resize
+
+function changeDirLeft() {
+    if($('body').width() > 992) {
+        $('.special').css({ 'marginRight': '0px', 'marginLeft': 'auto' });
+        $('.special-second').css({ 'marginLeft': '0px', 'marginRight': 'auto' });
+    }
+    else{
+        $('.special').css({ 'marginRight': 'auto', 'marginLeft': 'auto' });
+        $('.special-second').css({ 'marginLeft': 'auto', 'marginRight': 'auto' });
+    }
+}
+
+function changeDirRight() {
+    if($('body').width() > 992) {
+        $('.special').css({ 'marginLeft': '0px', 'marginRight': 'auto' });
+        $('.special-second').css({ 'marginRight': '0px', 'marginLeft': 'auto' });
+    }
+    else{
+        $('.special').css({ 'marginRight': 'auto', 'marginLeft': 'auto' });
+        $('.special-second').css({ 'marginLeft': 'auto', 'marginRight': 'auto' });
+    }
+}
+
+$(window).on('resize', () => {
+
+    if(active === true) {
+        changeDirLeft();
+    }
+    else {
+        changeDirRight();
+    }
+});
+
+
+// click on button for change lang 
+
+sel.addEventListener('click' , () => {
+    active = !active;
+    
+    if(active === true) {
         $('body').css('fontFamily', 'Roboto');
 
         // .............................
@@ -69,14 +115,12 @@ sel.addEventListener('change', function () {
         $('a[href = "#about"]').text('About Us');
         $('a[href = "#get"]').text('Get Our App');
 
-        $('.custome option[value = English]').text('English');
-        $('.custome option[value = Arabic]').text('العربية');
-
+        $('.custome .language button').text('العربيـة');
         // ...............................
 
         $('header').attr('dir', 'ltr');
-        $('.caption h1').text('Save Your Time With One Click')
-        $('.caption p').text('Your time is so important to that our job is to save your time and help you get an appointment without waiting. ');
+        $('.caption h1').text('Save your time and money')
+        $('.caption p').text('We solved it in one application that saves your time and money, from your home you can book your appointments, tables, events, and more other options,  and find the best exclusive offers that save your wallet and provides all your home services, your Business consulting and others. ');
         $('.home .vectors .vector').css('marginTop', '0px');
         $('.home .buttons .special-m').html(`<i
             class="fa-solid fa-download me-1"></i> Get App`);
@@ -104,37 +148,34 @@ sel.addEventListener('change', function () {
         }
 
         $('.feature span').css({ 'marginLeft': '0px', 'marginRight': '14px' })
-        $('.features .main-title h5').text('What We Serve?');
-        $('.features .main-title h2').text('Our Features');
-        $('.feature .one').text('Book your queue and appointment from anywhere.');
-        $('.feature .two').html(`Looking for fun? Zari on Time let you know best places to have fun.`);
-        $('.feature .three').text('Book nearest events around you.');
-        $('.feature .four').text('Get all kinds of offers from one app.');
-        $('.feature .five').text('Know the expected arrival time and service level.');
-        $('.feature .six').text('Order you coffee or meal from any cafe or restaurant thru the app.');
-        $('.feature .seven').text('Get the latest discount coupons through the app.');
-        $('.feature .eight').text('Request the service you need while you are at home..');
+        $('.features .main-title h5').text('Features');
+        $('.features .main-title h2').text('We do this and more');
+        $('.feature .one').text('Book your appointment with our partners and choose the day that suits you.  All you must do is choose the appropriate date and book it, (Halls, restaurants, car rental, clinics and many other) all you need just choose the suitable date and time.');
+        $('.feature .two').html('Enjoy with your family members or friends, we collected the best entertainment places in your area that suit all categories and saved the time of confusion and choice for you.');
+        $('.feature .three').text('Dont be confused of choosing where to go and where are the best places to have fun with our partners in KSA, EGYPYT and soon in all GCC Countries.');
+        $('.feature .four').text('The most unique and exclusive coupons you can buy through the application that provide saving for you, get coupons and discount services.');
+        $('.feature .five').text('The most exclusive offers in your area in various fields according to your interest and thus we saved the hard of searching for the best offers and also, we saved your money.');
+        $('.feature .six').text('Why do you wait for your turn and stop in the crowded queues? Take the waiting number while you are at home and come to your appointment at Banks, Hospitals, Restaurants and others.');
+        $('.feature .seven').text('Order from the application, receive when you in the car, and save the time of preparation for yourself.');
+        $('.feature .eight').text('Request the service you need while you at home! Home services, telephone consultations and more');
 
         // ................................................
 
-        $('.screenshots h5').text('Need to see our app?');
-        $('.screenshots h2').text('Screen Shots');
+        $('.screenshots h5').text('Application');
+        $('.screenshots h2').text('Get the knowledge about the app');
 
         // ................................................
 
         $('.about').attr('dir', 'ltr');
-        $('.about h5').text('Do you Know us?');
-        $('.about h2').text('About Zari On Time');
-        $('.about p').text(`Zari on Time let you make a reservation at any Doctors, Salons,
-            Banks....etc
-            Zari on Time is used when you don’t like to wait in Banks or outside using two apps one for
-            Client and the other for the banks.`);
+        $('.about h5').text('About us');
+        $('.about h2').text('About Zari on time...');
+        $('.about p').text('An application that provides various reservation services for hospitals, salons, restaurants, banks, and others... In Saudi Arabia, Egypt, and soon in the GCC Countries, and you can see all the offers and coupons while you are at home.');
 
         // .................................................
 
         $('.get').attr('dir', 'ltr');
-        $('.get .main-title h5').text('Do you have our app?');
-        $('.get .main-title h2').text('Get Our Applications');
+        $('.get .main-title h5').text('Get our app');
+        $('.get .main-title h2').text('Download the application');
         $('.get .main-title p').text('Our applications are available now on App store & Play store..');
         $('.parag p').css('textAlign', 'start');
         $('.client h4').text('Zari on Time (Client App)');
@@ -156,9 +197,12 @@ sel.addEventListener('change', function () {
         $('.logo-footer h5').text('Follow us ');
         $('.navigate .first-navigate').text('navigate');
         $('.navigate .contact').text('Contact us');
+        $('.navigate .contact2').text('KSA Branches');
+        $('.navigate .contact3').text('Egypt Branches');
         $('.navigate div span').removeClass('ms-3');
         $('.navigate div span').addClass('me-3');
         $('.navigate div .ksa').text('7865 King Abdullah Bin - Abdulaziz Road - Jasham - AL-Madina - KSA.');
+        $('.navigate div .ksa2').text('Anas Abn Malek Street - Osman Abn Afan - El-Ryad - KSA');
         $('.navigate div .egy').text('9 Street Saeed Zakaria - Nasr City - Cairo - Egypt.');
         $('.phone a').attr('dir', 'ltr');
         $('.phone .first').removeClass('ms-2');
@@ -166,7 +210,7 @@ sel.addEventListener('change', function () {
         $('.phone .second').removeClass('me-2');
         $('.phone .second').addClass('ms-2');
     }
-    else if (this.options[sel.selectedIndex].text == 'Arabic' || this.options[sel.selectedIndex].text == 'العربية') {
+    else{
         $('body').css('fontFamily', 'Tajawal')
 
         // .............................
@@ -183,14 +227,12 @@ sel.addEventListener('change', function () {
         $('a[href = "#about"]').text('تعرف علينا');
         $('a[href = "#get"]').text('الحصول على التطبيق');
 
-        $('.custome option[value = English]').text('English');
-        $('.custome option[value = Arabic]').text('العربية');
-
+        $('.custome .language button').text('English');
         // ...............................
 
         $('header').attr('dir', 'rtl');
-        $('.caption h1').text('جبنالك الحل في تطبيق واحد لكي نوفر لك وقتك ومالك')
-        $('.caption p').text('من بيتك تقدر تحجز مواعيدك و طاولتك و مناسباتك والخيارات أكثر, وتلاقي أفضل العروض الحصرية اللي هتوفر فلوسك, وكذلك جميع خدماتك المنزلية نظافة صيانة استشارات وغيرها..');
+        $('.caption h1').text('‌حليناها في تطبيق واحد نوفر لك وقتك ومالك')
+        $('.caption p').text('‌من بيتك تقدر تحجز مواعيدك وطاولاتك ومناسباتك والخيارات أكثر، ‌وتلاقي أفضل العروض الحصرية اللي توفر جيبك‌ وجميع الخدمات المنزلية والاستشارية وغيرها..');
         $('.home .vectors .vector').css('marginTop', '30px');
         $('.home .buttons .special-m').html(`<i
             class="fa-solid fa-download me-1"></i> الحصول علي التطبيق`);
@@ -217,21 +259,21 @@ sel.addEventListener('change', function () {
         }
         
         $('.feature span').css({ 'marginRight': '0px', 'marginLeft': '14px' })
-        $('.features .main-title h5').text('نسوي كذا وأكثر..');
-        $('.features .main-title h2').text('أبرز ميزات تطبيق Zari on time');
+        $('.features .main-title h5').text('المميزات');
+        $('.features .main-title h2').text('نسوي كذا وأكثر');
         $('.feature .one').text('‌احجز موعدك مع شركائنا واختار اليوم اللي يناسبك سواء استراحات‌، قاعات، مطاعم، تأجير سيارات، عيادات وغيرها العديد كل اللي عليك تختار الموعد المناسب وتحجز‌.');
-        $('.feature .two').html(`‌استمتع مع أفراد أسرتك أو أصدقائك جمعنا أفضل الأماكن الترفيهية في منطقتك‌ اللي تناسب كل‌‌ الفئات وفرنا عليك وقت الحيرة والاختيار‌.`);
+        $('.feature .two').html('‌استمتع مع أفراد أسرتك أو أصدقائك جمعنا أفضل الأماكن الترفيهية في منطقتك‌ اللي تناسب كل‌‌ الفئات وفرنا عليك وقت الحيرة والاختيار‌.');
         $('.feature .three').text('‌لا تحتار وتشيل هم وين تروح ووين افضل الأماكن لقضاء متعتك من خلال شركائنا في كل من المملكة العربية السعودية و‌‌مصر وقريباً في الخليج .');
-        $('.feature .four').text('‌ليه تنتظر دورك وتوقف في زحمة الطوابير خذ رقم الانتظار وانت في بيتك وتعال على‌ ‌موعدك بنوك‌، مستشفيات، عيادات، مطاعم وغيرها.');
-        $('.feature .five').text('‌اطلب من التطبيق واستلم من السيارة و وفر على نفسك وقت التجهيز.');
-        $('.feature .six').text('اطلب قهوتك أو وجبتك من أي كافية أو مطعم من خلال التطبيق.');
-        $('.feature .seven').text('‌اكثر العروض الحصرية والخاصة تقدر تشتريها من خلال التطبيق واللي توفر عليك، احصل على‌ ‌كوبونات وخدمات مخفضة .');
-        $('.feature .eight').text('‌اطلب الخدمة اللي تحتاجها وانت ببيتك! ‌صيانة منزلية، عاملات منزلية، استشارات‌‌ هاتفية مع مختصين قانونيين ‌ماليين وغيرهم..');
+        $('.feature .four').text(' أكثر العروض في منطقتك والحصرية في مجالات متعددة حسب اهتمامك وبكذا وفرنا عليك مشقة البحث عن‌ ‌افضل العروض ووفرنا مالك‌.');
+        $('.feature .five').text('‌ليه تنتظر دورك وتوقف في زحمة الطوابير خذ رقم الانتظار وانت في بيتك وتعال على‌ ‌موعدك بنوك‌، مستشفيات، عيادات، مطاعم وغيرها.');
+        $('.feature .six').text('‌اطلب من التطبيق واستلم من السيارة و وفر على نفسك وقت التجهيز .‌');
+        $('.feature .seven').text('‌اكثر الكوبونات الحصرية والخاصة تقدر تشتريها من خلال التطبيق واللي توفر عليك، احصل على‌ ‌كوبونات وخدمات مخفضة .');
+        $('.feature .eight').text('‌اطلب الخدمة اللي تحتاجها وانت ببيتك!‌ ‌صيانة منزلية، عاملات منزلية، استشارات‌‌ هاتفية مع مختصين قانونيين ‌ماليين وغيرهم..');
 
         // ................................................
 
-        $('.screenshots h5').text('بحاجة لرؤية تطبيقنا ؟');
-        $('.screenshots h2').text('لقطات');
+        $('.screenshots h5').text('التطبيق');
+        $('.screenshots h2').text('تعرف على التطبيق');
 
         // ................................................
 
@@ -245,7 +287,7 @@ sel.addEventListener('change', function () {
         $('.get').attr('dir', 'rtl');
         $('.get .main-title h5').text('الحصول على التطبيق ؟');
         $('.get .main-title h2').text('حمل التطبيق احجز موعدك وريح بالك!');
-        $('.get .main-title p').text('تطبيقاتنا متاحة الآن علي App store & Play store..');
+        $('.get .main-title p').text('التطبيق متاح الآن على App store & Play store');
         $('.parag p').css('textAlign', 'start');
         $('.client h4').text('Zari on Time (تطبيق العميل)');
         $('.client i').removeClass('me-3');
@@ -265,9 +307,12 @@ sel.addEventListener('change', function () {
         $('.logo-footer h5').text('تابعنــــا');
         $('.navigate .first-navigate').text('التنقل');
         $('.navigate .contact').text('تواصل معنــا');
+        $('.navigate .contact2').text('فروع السعودية');
+        $('.navigate .contact3').text('فروع مصر');
         $('.navigate div span').removeClass('me-3');
         $('.navigate div span').addClass('ms-3');
         $('.navigate div .ksa').text('7865 الملك عبدالله بن عبدالعزيز - جاسم - المدينة المنورة - المملكة العربية السعودية.');
+        $('.navigate div .ksa2').text('طريق انس بن مالك تقاطع طريق عثمان بن عفان - الرياض  - المملكة العربية السعودية.');
         $('.navigate div .egy').text('9 شارع سعيد زكريا - مدينة نصر - القاهرة - جمهورية مصر العربية.');
         $('.phone a').attr('dir', 'ltr');
         $('.phone .first').removeClass('me-2');
@@ -275,4 +320,4 @@ sel.addEventListener('change', function () {
         $('.phone .second').removeClass('ms-2');
         $('.phone .second').addClass('me-2');
     }
-});
+})

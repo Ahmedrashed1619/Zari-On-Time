@@ -163,20 +163,20 @@ img {
     background-color: var(--mainColor);
 }
 
-.custome .language:hover select,
+.custome .language:hover button,
 .custome .language:hover h5 {
     color: #fff !important;
 }
 
-.custome .language:hover option[value] {
+/* .custome .language:hover option[value] {
     color: var(--mainColor) !important;
-}
+} */
 
 .custome .language:hover.language i {
     color: #fff !important;
 }
 
-select {
+.custome .language button {
     color: var(--mainColor);
     border: none;
     outline: none;
@@ -185,9 +185,9 @@ select {
     transition: all 0.25s;
 }
 
-option {
+/* option {
     transition: all 0.25s;
-}
+} */
 
 /* Responsive navbar */
 
