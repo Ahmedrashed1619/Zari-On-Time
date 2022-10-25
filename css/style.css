@@ -232,7 +232,7 @@ img {
     font-size: 20px;
 }
 
-.buttons a {
+.buttons a, .buttons button {
     font-size: 18px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -240,6 +240,48 @@ img {
     font-weight: 600;
     line-height: 22px;
     transition: all 0.25s;
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.907);
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.play{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    position: relative;
+    width: 900px;
+    outline: none;
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    font-size: 30px;
+}
+
+@media screen and (max-width: 992px){
+    .trailer video{
+        max-width: 90%;
+    }
 }
 
 .main-btn {

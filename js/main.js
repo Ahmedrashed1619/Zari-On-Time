@@ -321,3 +321,25 @@ sel.addEventListener('click' , () => {
         $('.phone .second').addClass('me-2');
     }
 })
+
+// click on video button
+
+function toggleTrailer() {
+    let trailer = document.querySelector('.trailer');
+    let video = document.querySelector('video');
+
+    trailer.classList.toggle('play');
+    video.pause();
+    video.currentTime = 0;
+}
+
+let btn = document.querySelector('.modal-btn');
+let closeBtb = document.querySelector('.close');
+
+btn.addEventListener('click' , () => {
+    toggleTrailer();
+});
+
+closeBtb.addEventListener('click' , () => {
+    toggleTrailer();
+});
